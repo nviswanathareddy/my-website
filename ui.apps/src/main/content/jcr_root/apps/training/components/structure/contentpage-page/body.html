@@ -13,7 +13,6 @@
   ~ See the License for the specific language governing permissions and
   ~ limitations under the License.
   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/-->
-<sly data-sly-include="/apps/mattel/play/components/structure/homepage-page/generalConfig.html"></sly>
 <div id="consent_blackbar" style="position:absolute;z-index:9999;"></div>
 <!-- skip main content link 
 <a class="skip-main" href="#page-content">Skip to content</a>-->
@@ -44,8 +43,8 @@
                      </style>
                 </sly>
             <sly data-sly-use.templatedContainer="com.day.cq.wcm.foundation.TemplatedContainer" data-sly-repeat.child="${templatedContainer.structureResources}" data-sly-resource="${child.path @ resourceType=child.resourceType, decorationTagName='div'}"></sly>
-            <sly data-sly-use.PlayPage="com.mattel.play.core.model.PlayPageModel">
-                <sly data-sly-test.leavingInterstitialPath="${PlayPage.leavingInterstitialPath}">
+            <sly data-sly-use.TrainingPage="com.training.core.model.TrainingPageModel">
+                <sly data-sly-test.leavingInterstitialPath="${TrainingPage.leavingInterstitialPath}">
                     <article data-sly-resource="${leavingInterstitialPath @ wcmmode='disabled'}" data-sly-unwrap></article>
                 </sly>
             </sly>

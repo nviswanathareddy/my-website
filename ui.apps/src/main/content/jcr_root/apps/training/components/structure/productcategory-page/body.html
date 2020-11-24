@@ -13,7 +13,7 @@
   ~ See the License for the specific language governing permissions and
   ~ limitations under the License.
   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/-->
-<sly data-sly-include="/apps/mattel/play/components/structure/homepage-page/generalConfig.html"></sly>
+<sly data-sly-include="/apps/training/components/structure/homepage-page/generalConfig.html"></sly>
 <div id="consent_blackbar" style="position:absolute;z-index:9999;"></div>
 <!-- skip main content link 
 <a class="skip-main" href="#page-content">Skip to content</a>-->
@@ -24,7 +24,7 @@
     <span id="preload1"></span>
     <span id="preload2"></span>
 </div>
-<sly data-sly-use.PlayPage="com.mattel.play.core.model.PlayPageModel">
+<sly data-sly-use.TrainingPage="com.training.core.model.TrainingPageModel">
     <div class="outer-wrapper">
         <div class="inner-wrapper">
             <sly data-sly-test="${(properties.pageBgImg == null && properties.pageBgColor == null )||(properties.backOption=='image'&& properties.pageBgImg ==null)||(properties.backOption=='color'&& properties.pageBgColor ==null)}">
@@ -44,20 +44,16 @@
                      	}
                      </style>
                 </sly>
-                <sly data-sly-resource="${'title' @ resourceType='mattel/play/components/content/title'}"></sly>
-                <sly data-sly-test.productCategoryFilterPath="${PlayPage.productCategoryFilterPath}">
+                <sly data-sly-resource="${'title' @ resourceType='training/components/content/title'}"></sly>
+                <sly data-sly-test.productCategoryFilterPath="${TrainingPage.productCategoryFilterPath}">
                     <article data-sly-resource="${productCategoryFilterPath @ wcmmode='disabled'}" data-sly-unwrap></article>
                 </sly>
-                <sly data-sly-resource="${'productsgrid' @ resourceType='mattel/play/components/content/productsGrid'}"></sly>
+                <sly data-sly-resource="${'productsgrid' @ resourceType='training/components/content/productsGrid'}"></sly>
                 
-                <sly data-sly-test.leavingInterstitialPath="${PlayPage.leavingInterstitialPath}">
+                <sly data-sly-test.leavingInterstitialPath="${TrainingPage.leavingInterstitialPath}">
                     <article data-sly-resource="${leavingInterstitialPath @ wcmmode='disabled'}" data-sly-unwrap></article>
                 </sly>
             </div>
         </div>
     </div>
 </sly>
-<script type="text/javascript" src="/apps/mattel/play/clientlibs/clientlib-base/js/analytics.js"></script>
-<script type="text/javascript">
-    _satellite.pageBottom();
-</script>

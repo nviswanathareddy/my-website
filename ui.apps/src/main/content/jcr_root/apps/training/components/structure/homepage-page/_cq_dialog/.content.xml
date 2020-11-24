@@ -207,10 +207,10 @@
                                             </exConfig>
                                         </items>
                                     </export>
-                                    <mattelConfig
+                                    <trainingConfig
                                         cq:showOnCreate="{Boolean}false"
                                         jcr:primaryType="nt:unstructured"
-                                        jcr:title="Mattel Configurations"
+                                        jcr:title="Training Configurations"
                                         sling:resourceType="granite/ui/components/coral/foundation/form/fieldset">
                                         <items jcr:primaryType="nt:unstructured">
                                             <isNotLinkable
@@ -239,7 +239,7 @@
                                                     cq-msm-lockable="cq:isSpecialLink"/>
                                             </isSpecialLink>
                                         </items>
-                                    </mattelConfig>
+                                    </trainingConfig>
                                 </items>
                             </column>
                         </items>
@@ -296,13 +296,13 @@
                                                 useFixedInlineToolbar="{Boolean}true">
                                                 <htmlRules
                                                     jcr:primaryType="nt:unstructured"
-                                                    sling:resourceSuperType="mattel/play/components/content/playRtePlugins/htmlRules"/>
+                                                    sling:resourceSuperType="training/components/content/trainingRtePlugins/htmlRules"/>
                                                 <rtePlugins
                                                     jcr:primaryType="nt:unstructured"
-                                                    sling:resourceSuperType="mattel/play/components/content/playRtePlugins/rtePlugins"/>
+                                                    sling:resourceSuperType="training/components/content/trainingRtePlugins/rtePlugins"/>
                                                 <uiSettings
                                                     jcr:primaryType="nt:unstructured"
-                                                    sling:resourceSuperType="mattel/play/components/content/playRtePlugins/uiSettings"/>
+                                                    sling:resourceSuperType="training/components/content/trainingRtePlugins/uiSettings"/>
                                             </metaDescription>
                                             <canonicalUrl
                                                 jcr:primaryType="nt:unstructured"
@@ -346,13 +346,13 @@
                                                 useFixedInlineToolbar="{Boolean}true">
                                                 <htmlRules
                                                     jcr:primaryType="nt:unstructured"
-                                                    sling:resourceSuperType="mattel/play/components/content/playRtePlugins/htmlRules"/>
+                                                    sling:resourceSuperType="training/components/content/trainingRtePlugins/htmlRules"/>
                                                 <rtePlugins
                                                     jcr:primaryType="nt:unstructured"
-                                                    sling:resourceSuperType="mattel/play/components/content/playRtePlugins/rtePlugins"/>
+                                                    sling:resourceSuperType="training/components/content/trainingRtePlugins/rtePlugins"/>
                                                 <uiSettings
                                                     jcr:primaryType="nt:unstructured"
-                                                    sling:resourceSuperType="mattel/play/components/content/playRtePlugins/uiSettings"/>
+                                                    sling:resourceSuperType="training/components/content/trainingRtePlugins/uiSettings"/>
                                             </robotsText>
                                             <metaImage
                                                 jcr:primaryType="nt:unstructured"
@@ -439,10 +439,10 @@
                             </column>
                         </items>
                     </errorpage>
-                    <playconfig
+                    <trainingconfig
                         cq:showOnCreate="{Boolean}true"
                         jcr:primaryType="nt:unstructured"
-                        jcr:title="Mattel Play Configurations"
+                        jcr:title="Training Configurations"
                         sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns">
                         <items jcr:primaryType="nt:unstructured">
                             <column
@@ -479,7 +479,7 @@
                                 </items>
                             </column>
                         </items>
-                    </playconfig>
+                    </trainingconfig>
                     <pageBackgroundConfig
                         cq:showOnCreate="{Boolean}true"
                         jcr:primaryType="nt:unstructured"

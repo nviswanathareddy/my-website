@@ -13,7 +13,6 @@
   ~ See the License for the specific language governing permissions and
   ~ limitations under the License.
   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/-->
-<sly data-sly-include="/apps/mattel/play/components/structure/homepage-page/generalConfig.html"></sly>
 <div id="consent_blackbar" style="position:absolute;z-index:9999;"></div>
 <!-- skip main content link 
 <a class="skip-main" href="#page-content">Skip to content</a> -->
@@ -25,7 +24,7 @@
     <span id="preload2"></span>
 </div>
 
-<sly data-sly-use.PlayPage="com.mattel.play.core.model.PlayPageModel">
+<sly data-sly-use.TrainingPage="com.training.core.model.TrainingPageModel">
     <div class="outer-wrapper">
         <div class="inner-wrapper">
              <sly data-sly-test="${(properties.pageBgImg == null && properties.pageBgColor == null )||(properties.backOption=='image'&& properties.pageBgImg ==null)||(properties.backOption=='color'&& properties.pageBgColor ==null)}">
@@ -45,13 +44,13 @@
                      	}
                      </style>
                 </sly>
- 				<article data-sly-resource="${'game' @ resourceType='mattel/play/components/content/game'}" data-sly-unwrap></article>
+ 				<article data-sly-resource="${'game' @ resourceType='training/components/content/game'}" data-sly-unwrap></article>
 
-                <sly data-sly-test.gameLandingGridPath="${PlayPage.gameLandingGridPath}">
+                <sly data-sly-test.gameLandingGridPath="${TrainingPage.gameLandingGridPath}">
                     <article data-sly-resource="${gameLandingGridPath @ wcmmode='disabled'}" data-sly-unwrap></article>
                 </sly>
 
-                <sly data-sly-test.leavingInterstitialPath="${PlayPage.leavingInterstitialPath}">
+                <sly data-sly-test.leavingInterstitialPath="${TrainingPage.leavingInterstitialPath}">
                     <article data-sly-resource="${leavingInterstitialPath @ wcmmode='disabled'}" data-sly-unwrap></article>
                 </sly>
             </div>

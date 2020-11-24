@@ -15,12 +15,8 @@
 */-->
 
 <sly data-sly-use.scriptUrl="com.mattel.play.core.model.PlayPageModel">
-	<sly data-sly-test.play="${scriptUrl.brandName!='fisher-price'}"data-sly-use.clientlib="/libs/granite/sightly/templates/clientlib.html">
-	    <sly data-sly-call="${clientlib.js @ categories='play.scripts'}"/> 
-	    <sly data-sly-test="${wcmmode.preview || wcmmode.edit}" data-sly-call="${clientlib.js @ categories='play.scripts'}"/>
-	</sly>
-	<sly data-sly-test="${!play}" data-sly-use.clientlibecomm="/libs/granite/sightly/templates/clientlib.html" >
-		<sly data-sly-call="${clientlibecomm.js @ categories='ecomm.scripts,ecomm.siteHeader,ecomm.brandnCategory,play.pdp,ecomm.downloadApp,ecomm.signUp'}"/> 
-		<sly data-sly-test="${wcmmode.preview || wcmmode.edit}" data-sly-call="${clientlibecomm.js @ categories='ecomm.scripts,ecomm.siteHeader,ecomm.brandnCategory,play.pdp,ecomm.downloadApp,ecomm.signUp,ecomm.search'}"/>
+	<sly data-sly-use.clientlib="/libs/granite/sightly/templates/clientlib.html">
+	    <sly data-sly-call="${clientlib.js @ categories='training.scripts'}"/> 
+	    <sly data-sly-test="${wcmmode.preview || wcmmode.edit}" data-sly-call="${clientlib.js @ categories='training.scripts'}"/>
 	</sly>
 </sly>
