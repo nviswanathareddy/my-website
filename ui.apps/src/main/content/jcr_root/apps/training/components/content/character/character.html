@@ -1,6 +1,6 @@
 <sly data-sly-test="${wcmmode.edit}">${'Character Details Module' @ i18n}</sly>
 <sly
-	data-sly-use.characterModel="com.training.core.model.CharacterDetailsModel">
+	data-sly-use.characterModel="com.training.core.models.CharacterDetailsModel">
 <input type="hidden" id="selectedCharacter"
 	value="${characterModel.selecterCharacter}" />
 <div class="play-category-details-component">
@@ -16,7 +16,7 @@
 			<sly
 				data-sly-test="${properties.carouBackOption=='color' && properties.carBgColor !=null}">
 			<ul class="nav-carousel-slides char-tiles"
-				style="background: ${properties.carBgColor@ context='styleString'">
+				style="background: ${properties.carBgColor@ context='styleString'}">
 			</sly>
 			<sly
 				data-sly-test="${properties.carouBackOption=='image'&& properties.carBgPattern !=null}">
@@ -46,7 +46,7 @@
 	<sly
 		data-sly-test="${properties.charBackOption=='color' && properties.chBgColor!=null}">
 	<div class="char-detials-comp"
-		style="background: ${properties.chBgColor@context='styleString'">
+		style="background: ${properties.chBgColor@context='styleString'}">
 	</sly>
 	<sly
 		data-sly-test="${properties.charBackOption=='image' && properties.chBgImg!=null}">
@@ -59,7 +59,7 @@
 			data-tracking-id="navigating-arrows|left|${characterModel.prevCharacter}">Previous</button>
 		<div class="char-detials-content">
 			<div class="char-details-image"
-				style="float: ${properties.alignPrimaryImage@context='styleString'">
+				style="float: ${properties.alignPrimaryImage@context='styleString'}">
 				<img src="${properties.charImageRef}"
 					alt="${properties.charAltText @i18n}">
 			</div>
@@ -76,7 +76,7 @@
 			data-sly-test="${properties.charSecondayImage!=null||properties.subHeading!=null||properties.charExtraDesc!=null}">
 		<div class="char-detials-content">
 			<div class="char-details-image img-right"
-				style="float: ${properties.alignSecondaryImage@context='styleString'"
+				style="float: ${properties.alignSecondaryImage@context='styleString'}"
 				data-sly-test="${properties.charSecondayImage!=null && properties.charSecondayImageAltText!=null}">
 				<img src="${properties.charSecondayImage}"
 					alt="${properties.charSecondayImageAltText @i18n}">

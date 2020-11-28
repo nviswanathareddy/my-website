@@ -26,7 +26,7 @@
 </div>
 <div class="outer-wrapper">
     <div class="inner-wrapper">
-    <sly data-sly-use.TrainingPage="com.training.core.model.TrainingPageModel">
+    <sly data-sly-use.TrainingPage="com.training.core.models.TrainingPageModel">
          <sly data-sly-test="${(properties.pageBgImg == null && properties.pageBgColor == null )||(properties.backOption=='image'&& properties.pageBgImg ==null)||(properties.backOption=='color'&& properties.pageBgColor ==null)}">
                     <div class="page-view fixed-header" id="pagename-${currentPage.name}">
                 </sly>

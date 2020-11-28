@@ -7,7 +7,7 @@ Videos' @ i18n} </sly>
 	data-height-sync=".gallery-image"
 	id="${properties.linkNavigationCheck?properties['linkNavOption']:''}"
 	data-link-attribute="${properties.linkNavigationCheck?properties['linkNavOption']:''}"
-	style="background-color: ${properties.backgroundColor@ context='styleString'">
+	style="background-color: ${properties.backgroundColor@ context='styleString'}">
 </sly> <sly data-sly-test="${properties.backgroundColor == null}">
 <div class="training-${properties.galleryFor}"
 	data-height-sync=".gallery-image"
@@ -39,7 +39,7 @@ Videos' @ i18n} </sly>
 	<sly
 		data-sly-test="${properties.plpGalleryTitleBackgroundColor != null}">
 	<div class="video-page-title"
-		style="background-color: ${properties.plpGalleryTitleBackgroundColor@ context='styleString'">
+		style="background-color: ${properties.plpGalleryTitleBackgroundColor@ context='styleString'}">
 	</sly> <sly
 		data-sly-test="${properties.plpGalleryTitleBackgroundColor == null}">
 	<div class="video-page-title">
@@ -67,7 +67,7 @@ Videos' @ i18n} </sly>
 <sly data-sly-test="${properties.plpPlayerAvail}">
 
 <div
-	data-sly-use.allVideos="com.training.core.model.PLPVideoGalleryModel"
+	data-sly-use.allVideos="com.training.core.models.PLPVideoGalleryModel"
 	class="video-player-container">
 	<div class="video-player-in">
 		<sly data-sly-test="${properties.plpGalleryFrom == 'by date'}">
@@ -116,7 +116,7 @@ Videos' @ i18n} </sly>
 </sly>
 
 <div id="videos-gallery" class="videos-gallery-playlist">
-	<sly data-sly-use.scriptUrl="com.training.core.model.PlayPageModel">
+	<sly data-sly-use.scriptUrl="com.training.core.models.PlayPageModel">
 	<div class="training-tiles-gallery default">
 		<div class="gallery-tile"
 			data-player-available="${properties.plpPlayerAvail}">
@@ -124,7 +124,7 @@ Videos' @ i18n} </sly>
 				id="filter-alway-english" />
 			<sly data-sly-test="${properties.plpGalleryFrom == 'by date'}">
 			<sly
-				data-sly-use.allVideos="com.training.core.model.PLPVideoGalleryModel">
+				data-sly-use.allVideos="com.training.core.models.PLPVideoGalleryModel">
 			<sly data-sly-test.checkLength="${allVideos.videoByDateList.size<=1}" />
 			<ul class="training-list" id="player-gallery-thumbnail-datas"
 				data-empty="No Records Found."
@@ -158,7 +158,7 @@ Videos' @ i18n} </sly>
 
 			<sly data-sly-test="${properties.plpGalleryFrom == 'category'}">
 			<sly
-				data-sly-use.allVideos="com.training.core.model.PLPVideoGalleryModel">
+				data-sly-use.allVideos="com.training.core.models.PLPVideoGalleryModel">
 			<sly
 				data-sly-test.checkLength="${allVideos.videoByCategoryList.size<=1}" />
 			<ul class="training-list" id="player-gallery-thumbnail-datas"
@@ -193,7 +193,7 @@ Videos' @ i18n} </sly>
 
 			<sly data-sly-test="${properties.plpGalleryFrom == 'manual'}">
 			<sly
-				data-sly-use.allVideos="com.training.core.model.PLPVideoGalleryModel">
+				data-sly-use.allVideos="com.training.core.models.PLPVideoGalleryModel">
 			<sly data-sly-test.checkLength="${allVideos.videoManualList.size<=1}" />
 			<ul class="training-list" id="player-gallery-thumbnail-datas"
 				data-empty="No Records Found."

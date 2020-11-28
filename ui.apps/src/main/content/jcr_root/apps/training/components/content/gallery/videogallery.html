@@ -7,7 +7,7 @@ Videos' @ i18n} </sly>
 	data-height-sync=".gallery-image"
 	id="${properties.linkNavigationCheck?properties['linkNavOption']:''}"
 	data-link-attribute="${properties.linkNavigationCheck?properties['linkNavOption']:''}"
-	style="background-color: ${properties.backgroundColor@ context='styleString'">
+	style="background-color: ${properties.backgroundColor@ context='styleString'}">
 </sly> <sly data-sly-test="${properties.backgroundColor == null}">
 <div class="training-${properties.galleryFor}"
 	data-height-sync=".gallery-image"
@@ -37,7 +37,7 @@ Videos' @ i18n} </sly>
 		data-sly-test="${properties.galleryTitleBackOption == 'color'}">
 	<sly data-sly-test="${properties.galleryTitleBackgroundColor != null}">
 	<div class="video-page-title"
-		style="background-color: ${properties.galleryTitleBackgroundColor@ context='styleString'">
+		style="background-color: ${properties.galleryTitleBackgroundColor@ context='styleString'}">
 	</sly> <sly data-sly-test="${properties.galleryTitleBackgroundColor == null}">
 	<div class="video-page-title">
 	</sly> </sly> <sly data-sly-test="${properties.galleryTitleBackOption == 'image'}">

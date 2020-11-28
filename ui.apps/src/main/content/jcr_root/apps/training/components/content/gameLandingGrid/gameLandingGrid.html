@@ -7,7 +7,7 @@
 	data-arrows="true">
 	<div class="crm-container">
 		<sly
-			data-sly-use.categoryFilter="com.training.core.model.CategoryFilterModel">
+			data-sly-use.categoryFilter="com.training.core.models.CategoryFilterModel">
 		<a href="javascript:void(0)" class="category-drpdown-display">All<span></span></a>
 		<sly
 			data-sly-test="${(properties.catBgReference == null && properties.catBgColor == null )|| (properties.catBackOption =='image' && properties.catBgReference == null ) || (properties.catBackOption =='color' && properties.catBgColor == null )}">
@@ -19,7 +19,7 @@
 		</sly> <sly
 			data-sly-test="${properties.catBackOption =='color' && properties.catBgColor != null }">
 		<ul class="nav-carousel-slides nav-categorylist"
-			style="background-color: ${properties.catBgColor@ context='styleString'">
+			style="background-color: ${properties.catBgColor@ context='styleString'}">
 		</sly>
 		<li data-sly-test="${properties.allLabel}"><sly
 				data-sly-test.myVar="${categoryFilter.homePagePath}"
@@ -51,7 +51,7 @@
 	data-sly-test="${properties.landingBackOption =='color' && properties.landingBgColor != null }">
 <div class="training-tiles-gallery training-character-landing-block"
 	data-height-sync=".gallery-image"
-	style="background: ${properties.landingBgColor@ context='styleString'">
+	style="background: ${properties.landingBgColor@ context='styleString'}">
 </sly>
 <div class="gallery-tile">
 	<h2>${'All' @ i18n}</h2>
@@ -97,7 +97,7 @@
 		<sly
 			data-sly-test="${properties.catBackOption =='color' && properties.catBgColor != null }">
 		<ul class="nav-carousel-slides nav-categorylist"
-			style="background-color: ${properties.catBgColor@ context='styleString'">
+			style="background-color: ${properties.catBgColor@ context='styleString'}">
 		</sly>
 
 		</ul>
@@ -119,7 +119,7 @@
 <div id="training-game"
 	class="training-tiles-gallery training-character-landing-block"
 	data-height-sync=".gallery-image"
-	style="background: ${properties.landingBgColor@ context='styleString'">
+	style="background: ${properties.landingBgColor@ context='styleString'}">
 </sly>
 <div class="gallery-tile">
 	<h2>${'All' @ i18n}</h2>
@@ -157,7 +157,7 @@
 		<sly
 			data-sly-test="${properties.catBackOption =='color' && properties.catBgColor != null }">
 		<ul class="nav-carousel-slides nav-categorylist"
-			style="background-color: ${properties.catBgColor@ context='styleString'">
+			style="background-color: ${properties.catBgColor@ context='styleString'}">
 		</sly>
 
 		</ul>
@@ -179,7 +179,7 @@
 <div id="training-game"
 	class="training-tiles-gallery training-character-landing-block"
 	data-height-sync=".gallery-image"
-	style="background: ${properties.landingBgColor@ context='styleString'">
+	style="background: ${properties.landingBgColor@ context='styleString'}">
 </sly>
 <div class="gallery-tile">
 	<h2>${'All' @ i18n}</h2>

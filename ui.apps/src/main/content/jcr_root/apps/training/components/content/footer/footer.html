@@ -5,7 +5,7 @@
 	data-sly-test="${properties.backOption == 'color'}"> <sly
 	data-sly-test="${properties.backgroundColor != null}"> <footer
 	role="contentinfo"
-	style="background-color: ${properties.backgroundColor@ context='styleString'"></sly>
+	style="background-color: ${properties.backgroundColor@ context='styleString'}"></sly>
 <sly data-sly-test="${properties.backgroundColor == null}"> <footer
 	role="contentinfo"></sly> </sly> <sly
 	data-sly-test="${properties.backOption == 'image'}"> <sly
@@ -18,7 +18,7 @@
 	role="contentinfo"></sly>
 <div id="footer">
 	<sly
-		data-sly-use.footerObj="${'com.training.core.model.FooterModel' @ url=currentPage.Path}">
+		data-sly-use.footerObj="${'com.training.core.models.FooterModel' @ url=currentPage.Path}">
 	<sly data-sly-test="${!footerObj.isCountryDropdownExcluded}">
 	<div
 		data-sly-resource="${'dropdown' @ resourceType='wcm/foundation/components/parsys'}"></div>

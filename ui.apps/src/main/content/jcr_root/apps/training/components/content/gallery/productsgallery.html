@@ -1,6 +1,6 @@
 <sly data-sly-test="${wcmmode.edit}">${'Products Gallery
 Component' @ i18n}</sly>
-<sly data-sly-use.allChars="com.training.core.model.GalleryModel">
+<sly data-sly-use.allChars="com.training.core.models.GalleryModel">
 <sly
 	data-sly-test="${(properties.fileReferenceBgImg == null && properties.backgroundColor == null )||(properties.backOption=='image'&& properties.fileReferenceBgImg ==null)||(properties.backOption=='color'&& properties.backgroundColor ==null)}">
 <div class="training-tiles-gallery training-products training-products-hp"
@@ -11,7 +11,7 @@ Component' @ i18n}</sly>
 <div class="training-tiles-gallery training-products training-products-hp"
 	data-height-sync=".gallery-image" id="${allChars.linkNavOption}"
 	data-link-attribute="${allChars.linkNavOption}"
-	style="background: ${properties.backgroundColor@ context='styleString'">
+	style="background: ${properties.backgroundColor@ context='styleString'}">
 </sly> <sly
 	data-sly-test="${properties.backOption=='image'&& properties.fileReferenceBgImg !=null}">
 <div class="training-tiles-gallery training-products training-products-hp"
@@ -24,7 +24,7 @@ Component' @ i18n}</sly>
 </sly> <sly
 	data-sly-test="${properties.galleryTitleBackOption=='color' && properties.galleryTitleBackgroundColor !=null}">
 <div class="gallery-title"
-	style="background: ${properties.galleryTitleBackgroundColor@ context='styleString'">
+	style="background: ${properties.galleryTitleBackgroundColor@ context='styleString'}">
 </sly> <sly
 	data-sly-test="${properties.galleryTitleBackOption=='image'&& properties.galleryTitleFileReferenceBgImg !=null}">
 <div class="gallery-title"

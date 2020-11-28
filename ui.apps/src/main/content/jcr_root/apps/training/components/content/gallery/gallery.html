@@ -2,8 +2,8 @@
 	data-sly-test="${(properties.galleryFor!='video')&&( properties.galleryFor!='products') &&( properties.galleryFor!=null || properties.plpGalleryFor!='video')}">
 <sly data-sly-test="${wcmmode.edit}"> ${'Configure Gallery' @
 i18n}</sly> <sly
-	data-sly-use.allChars="com.training.core.model.GalleryModel"
-	data-sly-use.trainingPage="com.training.core.model.TrainingPageModel">
+	data-sly-use.allChars="com.training.core.models.GalleryModel"
+	data-sly-use.trainingPage="com.training.core.models.TrainingPageModel">
 <sly data-sly-test="${properties.backOption}"> <sly
 	data-sly-test="${properties.backOption == 'color'}"> <sly
 	data-sly-test="${properties.backgroundColor != null}"> <sly
@@ -12,13 +12,13 @@ i18n}</sly> <sly
 	class="training-tiles-gallery training-${properties.galleryFor} ${properties.styleFor}"
 	data-height-sync=".gallery-image" id="${allChars.linkNavOption}"
 	data-link-attribute="${allChars.linkNavOption}"
-	style="background-color: ${properties.backgroundColor@ context='styleString'">
+	style="background-color: ${properties.backgroundColor@ context='styleString'}">
 </sly> <sly
 	data-sly-test="${properties.styleFor=='others' || properties.styleFor==null}">
 <div class="training-tiles-gallery training-${properties.galleryFor}"
 	data-height-sync=".gallery-image" id="${allChars.linkNavOption}"
 	data-link-attribute="${allChars.linkNavOption}"
-	style="background-color: ${properties.backgroundColor@ context='styleString'">
+	style="background-color: ${properties.backgroundColor@ context='styleString'}">
 </sly> </sly> <sly data-sly-test="${properties.backgroundColor == null}"> <sly
 	data-sly-test="${properties.styleFor=='main-characters'}">
 <div
@@ -76,7 +76,7 @@ i18n}</sly> <sly
 	data-sly-test="${properties.galleryTitleBackOption == 'color'}">
 <sly data-sly-test="${properties.galleryTitleBackgroundColor != null}">
 <div class="gallery-title"
-	style="background-color: ${properties.galleryTitleBackgroundColor@ context='styleString'">
+	style="background-color: ${properties.galleryTitleBackgroundColor@ context='styleString'}">
 </sly> <sly data-sly-test="${properties.galleryTitleBackgroundColor == null}">
 <div class="gallery-title">
 </sly> </sly> <sly data-sly-test="${properties.galleryTitleBackOption == 'image'}">

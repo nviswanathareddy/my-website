@@ -4,8 +4,8 @@ Module' @ i18n}</sly>
 <div class="accordion-component"
 	id="${properties.linkNavigationCheck?properties['linkNavOption']:''}"
 	data-link-attribute="${properties.linkNavigationCheck?properties['linkNavOption']:''}"
-	style="background-color: ${properties.backgroundColor@ context='styleString'"
-	data-sly-use.accordionInfo="com.training.core.model.AccordionModel">
+	style="background-color: ${properties.backgroundColor@ context='styleString'}"
+	data-sly-use.accordionInfo="com.training.core.models.AccordionModel">
 </sly>
 <sly data-sly-test="${properties.backOption == 'image'}">
 <div
@@ -13,13 +13,13 @@ Module' @ i18n}</sly>
 	id="${properties.linkNavigationCheck?properties['linkNavOption']:''}"
 	data-link-attribute="${properties.linkNavigationCheck?properties['linkNavOption']:''}"
 	style="background-image: url('${properties.fileReferenceBgImg @ context=' styleString '}');"
-	data-sly-use.accordionInfo="com.training.core.model.AccordionModel">
+	data-sly-use.accordionInfo="com.training.core.models.AccordionModel">
 </sly>
 <sly data-sly-test="${properties.backOption==null}">
 <div class="accordion-component"
 	id="${properties.linkNavigationCheck?properties['linkNavOption']:''}"
 	data-link-attribute="${properties.linkNavigationCheck?properties['linkNavOption']:''}"
-	data-sly-use.accordionInfo="com.training.core.model.AccordionModel">
+	data-sly-use.accordionInfo="com.training.core.models.AccordionModel">
 </sly>
 <div class="title-block">
 	<h2>${properties.title @i18n}</h2>

@@ -1,7 +1,7 @@
 <sly data-sly-test="${wcmmode.edit}">${'Configure Category Filter
 Component' @ i18n}</sly>
 <sly data-sly-test="${properties.displayCategories}"
-	data-sly-use.myNav="${'com.training.core.model.CategoryFilterModel'  @ url=currentPage.Path}">
+	data-sly-use.myNav="${'com.training.core.models.CategoryFilterModel'  @ url=currentPage.Path}">
 <div data-sly-test="${myNav.displayCategory}"
 	class="cda-banner enable-carousel-nav"
 	data-slide-show="${myNav.slideCount != null ? myNav.slideCount : 10}"
@@ -15,7 +15,7 @@ Component' @ i18n}</sly>
 			data-sly-test="${properties.backgroundColour != null && properties.fileReferenceBgImg == null }">
 		<ul class="nav-carousel-slides nav-categorylist"
 			id="category-filter-carousel"
-			style="background-color: ${properties.backgroundColour@ context='styleString'">
+			style="background-color: ${properties.backgroundColour@ context='styleString'}">
 		</sly>
 		<sly data-sly-test="${properties.fileReferenceBgImg != null}">
 		<ul class="nav-carousel-slides nav-categorylist"

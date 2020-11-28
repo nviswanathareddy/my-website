@@ -1,11 +1,11 @@
 <sly data-sly-test="${wcmmode.edit}">${' Configure Game Player
 Module' @ i18n}</sly>
-<sly data-sly-use.TrainingPage="com.training.core.model.TrainingPageModel">
+<sly data-sly-use.TrainingPage="com.training.core.models.TrainingPageModel">
 <sly>
 <div class="game-player-area-component">
 	<sly data-sly-test="${properties.backOption == 'color'}">
 	<div class="game-player-area-content"
-		style="background: ${properties.backgroundColorModel@ context='styleString'">
+		style="background: ${properties.backgroundColorModel@ context='styleString'}">
 	</sly>
 	<sly data-sly-test="${properties.backOption == 'image'}">
 	<div class="game-player-area-content"

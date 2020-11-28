@@ -5,7 +5,7 @@
         cq:template="/conf/training/settings/wcm/templates/content-page"
         jcr:primaryType="cq:PageContent"
         jcr:title="Français"
-        sling:resourceType="training/components/structure/page"
+        sling:resourceType="/apps/training/components/structure/homepage-page"
         pageTitle="Nouveau Project">
         <root
             jcr:primaryType="nt:unstructured"
