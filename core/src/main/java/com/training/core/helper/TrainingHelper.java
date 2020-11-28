@@ -81,7 +81,6 @@ public class TrainingHelper extends WCMUsePojo {
 	public static String getBrandName(String path) {
 		LOGGER.info("getBrandName method of TrainingHelper starts");
 		String trainingPath = PropertyReaderUtils.getTrainingPath();
-		String rescuePath = TrainingSiteConfigurationUtils.getRescueRootPath();
 		String fpPath = TrainingSiteConfigurationUtils.getFpRootPath();
 		String trainingExpFragmentPath = TrainingSiteConfigurationUtils.getExpFragmentRootPath();
 		String fpExpFragmentPath = TrainingSiteConfigurationUtils.getFpExpFragmentRootPath();
@@ -92,8 +91,6 @@ public class TrainingHelper extends WCMUsePojo {
 			return fetchSubstring(path, trainingExpFragmentPath);
 		} else if (path.contains(fpExpFragmentPath) && !path.contains(rescueExpFragmentPath) || path.contains(fpPath)) {
 			return getFPBrandName(path);
-		} else if (path.contains(rescueExpFragmentPath) || path.contains(rescuePath)) {
-			return getRescueBrandName(path);
 		}
 		LOGGER.info("getBrandName method of TrainingHelper end");
 		return "";
@@ -144,19 +141,6 @@ public class TrainingHelper extends WCMUsePojo {
 		return path.substring(start, end);
 	}
 
-	public static String getRescueBrandName(String path) {
-		LOGGER.info("getRescueBrandName method of TrainingHelper starts");
-		String trainingPath = PropertyReaderUtils.getRescuePath();
-		String rootExpFragmentPath = TrainingSiteConfigurationUtils.getFpExpFragmentRootPath();
-		if (path.contains(trainingPath) && !path.equalsIgnoreCase(trainingPath + Constants.JCR_CONTENT)) {
-			return fetchSubstring(path, trainingPath);
-		} else if (path.contains(rootExpFragmentPath)) {
-			return fetchSubstring(path, rootExpFragmentPath);
-		}
-		LOGGER.info("getRescueBrandName method of TrainingHelper end");
-		return "";
-	}
-
 	public static String getAssetMetadataValue(String imagePath, ResourceResolver requestResolver,
 			String propertyName) {
 		String propertyValue = "";
@@ -202,14 +186,6 @@ public class TrainingHelper extends WCMUsePojo {
 		}
 		if (StringUtils.isNotBlank(brandName) && currentPagePath.contains(PropertyReaderUtils.getTrainingPath())) {
 			sitesRootPath = PropertyReaderUtils.getTrainingPath() + brandName;
-		} else if (StringUtils.isNotBlank(TrainingHelper.getRescueBrandName(currentPagePath))
-				&& currentPagePath.contains(TrainingSiteConfigurationUtils.getRescueRootPath())) {
-			sitesRootPath = PropertyReaderUtils.getRescuePath() + TrainingHelper.getRescueBrandName(currentPagePath);
-		} else if (StringUtils.isNotBlank(TrainingHelper.getRescueBrandName(currentPagePath))
-				&& !currentPagePath.contains(TrainingSiteConfigurationUtils.getRescueRootPath())
-				&& currentPagePath.contains(TrainingSiteConfigurationUtils.getFpRootPath())) {
-			String tempRoot = TrainingSiteConfigurationUtils.getFpRootPath();
-			sitesRootPath = tempRoot.substring(0, tempRoot.length() - 1);
 		} else {
 			int indexBrandName = currentPagePath.indexOf(brandName);
 			sitesRootPath = currentPagePath.substring(0, indexBrandName + brandName.length());

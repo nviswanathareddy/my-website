@@ -90,7 +90,7 @@ public class TrainingPageModel {
 	private String pageName;
 	private String parentPageType;
 	String currentPagePath;
-	String rescueParentName;
+	String rescueParentName = StringUtils.EMPTY;
 	String expFrLocaleRH = "";
 	int leftIndexShiftForSiteWOParentName;
 
@@ -153,17 +153,6 @@ public class TrainingPageModel {
 			clientlibCategory = checkClientLibCategory();
 			adobeTrackingNameForPage = inheritanceValueMap.getInherited("adobeTrackingNameForPage", String.class);
 			getPageNameAndParentPageType(resource);
-			/* SEO configurations end */
-			rescueBrandName = TrainingHelper.getRescueBrandName(resource.getPath());
-			if (resource.getPath().contains(PropertyReaderUtils.getRescuePath())) {
-				Resource rescueResource = resource.getParent();
-				Page rescueParentPage = rescueResource.adaptTo(Page.class);
-				if (rescueParentPage != null) {
-					rescueParentName = rescueParentPage.getAbsoluteParent(1).getName() != null
-							? rescueParentPage.getAbsoluteParent(1).getName()
-							: "";
-				}
-			}
 
 		}
 
@@ -470,9 +459,7 @@ public class TrainingPageModel {
 	 */
 	private void getParentPageTypeAndPageName(Page currentPage, Page homePage, String currentPagePath) {
 		if (StringUtils.isNotBlank(currentPagePath) && StringUtils.isNotBlank(homePagePath)
-				&& currentPagePath.equalsIgnoreCase(homePagePath)
-				&& !currentPagePath.contains(TrainingSiteConfigurationUtils.getFpRootPath())
-				&& currentPagePath.contains("rescue-heroes")) {
+				&& currentPagePath.equalsIgnoreCase(homePagePath)) {
 			pageName = currentPage.getName();
 			parentPageType = currentPage.getName();
 		} else if (currentPagePath.contains(TrainingSiteConfigurationUtils.getFpRootPath())
