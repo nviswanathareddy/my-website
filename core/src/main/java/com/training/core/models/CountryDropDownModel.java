@@ -37,9 +37,7 @@ import com.training.core.pojos.CountryDropDownPojo;
 import com.training.core.services.MultifieldReader;
 import com.training.core.utils.PropertyReaderUtils;
 
-/**
- * @author CTS CountryDropDownModel
- */
+
 @Model(adaptables = { SlingHttpServletRequest.class,
 		Resource.class }, defaultInjectionStrategy = DefaultInjectionStrategy.OPTIONAL)
 public class CountryDropDownModel {

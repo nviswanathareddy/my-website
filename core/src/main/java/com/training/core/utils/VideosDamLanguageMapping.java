@@ -6,9 +6,7 @@ import org.osgi.service.metatype.annotations.AttributeDefinition;
 import org.osgi.service.metatype.annotations.Designate;
 import org.osgi.service.metatype.annotations.ObjectClassDefinition;
 
-/**
- * @author CTS. Service for DAM Video Language Mapping configuration of play site.
- */
+
 @Component(service = VideosDamLanguageMapping.class, immediate = true)
 @Designate(ocd = VideosDamLanguageMapping.Config.class)
 public class VideosDamLanguageMapping {

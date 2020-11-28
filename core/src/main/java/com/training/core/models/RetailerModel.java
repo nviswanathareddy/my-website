@@ -1,4 +1,4 @@
-package com.training.core.model;
+package com.training.core.models;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -20,9 +20,7 @@ import com.training.core.pojos.RetailerPojo;
 import com.training.core.services.MultifieldReader;
 import com.training.core.services.TileGalleryAndLandingService;
 
-/**
- * @author CTS SiteNavigation Model to Retailer Component.
- */
+
 @Model(adaptables = Resource.class)
 public class RetailerModel {
 	@Inject

@@ -30,9 +30,7 @@ import com.training.core.services.MultifieldReader;
 import com.training.core.services.TileGalleryAndLandingService;
 import com.training.core.utils.CategoryFilterSlidesUtils;
 
-/**
- * @author CTS CategoryFilterModel
- */
+
 @Model(adaptables = { Resource.class,
 		SlingHttpServletRequest.class }, defaultInjectionStrategy = DefaultInjectionStrategy.OPTIONAL)
 public class CategoryFilterModel {

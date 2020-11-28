@@ -17,9 +17,6 @@ import com.day.cq.wcm.api.PageManager;
 import com.training.core.pojos.TagsPojo;
 import com.training.core.services.TileGalleryAndLandingService;
 
-/**
- * @author CTS.
- */
 @Model(adaptables = Resource.class, defaultInjectionStrategy = DefaultInjectionStrategy.OPTIONAL)
 public class ArticleDetailModel {
 

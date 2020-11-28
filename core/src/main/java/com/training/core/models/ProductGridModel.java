@@ -1,4 +1,4 @@
-package com.training.core.model;
+package com.training.core.models;
 
 import javax.annotation.PostConstruct;
 
@@ -18,9 +18,7 @@ import com.day.cq.wcm.api.PageManager;
 import com.training.core.helper.TrainingHelper;
 import com.training.core.utils.PropertyReaderUtils;
 
-/**
- * @author CTS ProductGridModel
- */
+
 @Model(adaptables = { Resource.class,
 		SlingHttpServletRequest.class }, defaultInjectionStrategy = DefaultInjectionStrategy.OPTIONAL)
 public class ProductGridModel {

@@ -1,4 +1,4 @@
-package com.training.core.model;
+package com.training.core.models;
 
 import javax.annotation.PostConstruct;
 import javax.inject.Inject;

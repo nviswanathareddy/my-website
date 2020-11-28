@@ -1,4 +1,4 @@
-package com.training.core.model;
+package com.training.core.models;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -21,9 +21,7 @@ import com.training.core.helper.TrainingHelper;
 import com.training.core.pojos.SiteNavigationPojo;
 import com.training.core.services.TileGalleryAndLandingService;
 
-/**
- * @author CTS SiteNavigation Model to Navigation.
- */
+
 @Model(adaptables = { SlingHttpServletRequest.class,
 		Resource.class }, defaultInjectionStrategy = DefaultInjectionStrategy.OPTIONAL)
 public class SiteNavigationModel {

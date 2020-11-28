@@ -1,4 +1,4 @@
-package com.training.core.servlet;
+package com.training.core.servlets;
 
 import java.io.IOException;
 import java.util.List;

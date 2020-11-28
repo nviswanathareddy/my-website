@@ -6,9 +6,6 @@ import org.osgi.service.metatype.annotations.AttributeDefinition;
 import org.osgi.service.metatype.annotations.Designate;
 import org.osgi.service.metatype.annotations.ObjectClassDefinition;
 
-/**
- * @author CTS. Service for properties configuration of play site.
- */
 @Component(service = CategoryFilterSlidesUtils.class, immediate = true)
 @Designate(ocd = CategoryFilterSlidesUtils.Config.class)
 public class CategoryFilterSlidesUtils {

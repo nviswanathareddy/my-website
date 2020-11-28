@@ -1,4 +1,4 @@
-package com.training.core.model;
+package com.training.core.models;
 
 import javax.annotation.PostConstruct;
 import javax.inject.Inject;
@@ -16,7 +16,7 @@ import com.training.core.pojos.VideoTile;
 import com.training.core.services.VideoGalleryService;
 
 @Model(adaptables = Resource.class, defaultInjectionStrategy = DefaultInjectionStrategy.OPTIONAL)
-public class PlayVideo {
+public class TrainingVideo {
 	@Inject
 	@Optional
 	private String videoThumbnail;
@@ -33,7 +33,7 @@ public class PlayVideo {
 
 	@Inject
 	private VideoGalleryService videoGalleryService;
-	private static final Logger LOGGER = LoggerFactory.getLogger(PlayVideo.class);
+	private static final Logger LOGGER = LoggerFactory.getLogger(TrainingVideo.class);
 	private VideoTile videoDetails;
 
 	/**

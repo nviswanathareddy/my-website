@@ -4,7 +4,7 @@
 	jcr:primaryType="sling:OsgiConfig"
 	scriptUrl="//assets.adobedtm.com/launch-EN891bdac1fb43415e9fa52133ac1d36f4-staging.min.js"
 	whyplayScriptUrl="//assets.adobedtm.com/launch-EN80357e280dce4c1e99b3866b16bdb6b4-development.min.js"
-	playPath="/content/mattel-play/" playDamPath="/content/dam/mattel/"
+	trainingPath="/content/mattel-play/" trainingDamPath="/content/dam/mattel/"
 	videoDamPath="/play-site/videos/" damGlobalPath="/global/"
 	productPath="/products" videoPath="/videos" characterPath="/characters"
 	gamePath="/games" homePath="/home"

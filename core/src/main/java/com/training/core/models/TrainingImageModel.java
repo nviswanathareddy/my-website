@@ -1,4 +1,4 @@
-package com.training.core.model;
+package com.training.core.models;
 
 import javax.annotation.PostConstruct;
 import javax.inject.Inject;
@@ -20,7 +20,7 @@ import com.training.core.pojos.TilePojo;
  * @author CTS Character Image Model
  */
 @Model(adaptables = Resource.class, defaultInjectionStrategy = DefaultInjectionStrategy.OPTIONAL)
-public class PlayImageModel {
+public class TrainingImageModel {
 
 	@Inject
 	String detailpageMapping;
@@ -32,7 +32,7 @@ public class PlayImageModel {
 	String tileAltTxt;
 	@Self
 	Resource resource;
-	private static final Logger LOGGER = LoggerFactory.getLogger(PlayImageModel.class);
+	private static final Logger LOGGER = LoggerFactory.getLogger(TrainingImageModel.class);
 	private TilePojo tilePojo = new TilePojo();
 
 	/**
